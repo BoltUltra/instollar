@@ -31,7 +31,7 @@ export default function Home() {
       <Map />
       <Companies />
       <TrustedBy />
-      <Testimonials testimonials={homepage?.testimonials} />
+      <Testimonials testimonials={homepage?.testimonials || []} />
       <Professionals />
       <CTA />
       <Footer />
