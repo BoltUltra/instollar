@@ -11,7 +11,7 @@ const CTA = () => {
   const { homepage, loading, error } = useFetchHomePage();
 
   // Add type annotation for homepage
-  const homepageWithDefault: HomePage | undefined = homepage;
+  const homepageWithDefault: HomePage | null | undefined = homepage;
 
   if (loading) {
     return <Loading />;
