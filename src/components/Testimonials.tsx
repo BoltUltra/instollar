@@ -3,7 +3,11 @@ import Image from "next/image";
 import { urlFor } from "@/sanity/utils";
 import { ArrowCircleLeft2, ArrowCircleRight2 } from "iconsax-react";
 
-const Testimonials = ({ testimonials }) => {
+interface TestimonialsProps {
+  testimonials: Testimonial[];
+}
+
+const Testimonials = ({ testimonials }: TestimonialsProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(false);
 

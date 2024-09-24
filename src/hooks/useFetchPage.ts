@@ -11,9 +11,9 @@ import {
 } from "@/sanity/utils";
 
 export function useFetchHomePage() {
-  const [homepage, setHomepage] = useState(null);
+  const [homepage, setHomepage] = useState<Homepage | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function fetchHomePage() {
