@@ -155,7 +155,7 @@ const Testimonials = () => {
 
         <div className="md:w-[75%]">
           <div className="flex items-start space-x-4">
-            <p className="text-[128px] text-primary-200 -mt-10">"</p>
+            <p className="text-[128px] text-primary-200 -mt-10">{`“`}</p>
             <div className="">
               <div
                 className={`testimonial-text ${fade ? "fade-out" : "fade-in"}`}
