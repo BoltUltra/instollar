@@ -19,6 +19,7 @@ const config: Config = {
           300: "#00816B",
         },
         secondary: "#EFFF3D",
+        background: "#f1f7f6",
       },
     },
   },

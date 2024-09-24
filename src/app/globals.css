@@ -42,8 +42,23 @@ h6 {
   font-size: 32px;
 }
 
+.company-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/company-hero.jpeg') no-repeat center center;
+  background-size: cover;
+}
+
 .cta {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/cta.png') no-repeat center center;
+  background-size: cover;
+}
+
+.about-cta {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/aboutCTA.jpeg') no-repeat center center;
+  background-size: cover;
+}
+
+.company-cta {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/companyCTA.png') no-repeat center center;
   background-size: cover;
 }
 
@@ -128,4 +143,57 @@ h6 {
 
 .fade-out {
   opacity: 0;
+}
+
+
+
+/* team members */
+.teams-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.team-member-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 20px; */
+}
+
+.team-member-images {
+  display: flex;
+  justify-content: center;
+  /* padding: 20px; */
+}
+
+.image-container {
+  /* margin: 20px; */
+}
+
+.next-image {
+  opacity: 0.5;
+}
+
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+  /* padding: 20px; */
+  margin-top: 30px;
+  width: 100%;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: #00524466;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.progress {
+  height: 5px;
+  background-color: #005244;
+  border-radius: 10px;
 }

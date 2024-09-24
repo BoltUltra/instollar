@@ -13,11 +13,11 @@ export async function getHomePage() {
 }
 
 export async function getAboutPage() {
-  return client.fetch(groq`*[_type == "home"][0]`);
+  return client.fetch(groq`*[_type == "about"][0]`);
 }
 
 export async function getCompaniesPage() {
-  return client.fetch(groq`*[_type == "home"][0]`);
+  return client.fetch(groq`*[_type == "companies"][0]`);
 }
 
 export async function getProfessionalsPage() {
