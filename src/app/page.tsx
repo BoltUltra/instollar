@@ -10,18 +10,8 @@ import Testimonials from "@/components/Testimonials";
 import TrustedBy from "@/components/TrustedBy";
 import Footer from "@/components/Footer";
 import Professionals from "@/components/Professionals";
-import { useFetchHomePage } from "@/hooks/useFetchPage";
-import Loading from "@/components/Loading";
 
 export default function Home() {
-  const { homepage, loading, error } = useFetchHomePage();
-
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <div>Error</div>;
-  }
   return (
     <div className="w-full">
       <Navbar />
@@ -31,7 +21,7 @@ export default function Home() {
       <Map />
       <Companies />
       <TrustedBy />
-      <Testimonials testimonials={homepage?.testimonials || []} />
+      <Testimonials />
       <Professionals />
       <CTA />
       <Footer />
