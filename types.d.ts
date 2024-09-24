@@ -14,13 +14,13 @@ interface HeaderData {
 }
 
 interface CTAData {
-  callToActionText: string;
-  buttonLink: string;
+  ctaHeader: string;
+  ctaAltText: string;
 }
 
 interface Homepage {
   testimonials: Testimonial[];
   // header: HeaderData;
-  // cta: CTAData;
+  cta: CTAData[];
   // Add other fields you expect in the homepage data
 }
