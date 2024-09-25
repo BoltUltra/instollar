@@ -1,19 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Loading from "./Loading";
-import { useFetchHomePage } from "@/hooks/useFetchPage";
 import { urlFor } from "@/sanity/utils";
 
-const Footer = () => {
-  const { homepage, loading, error } = useFetchHomePage();
-
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <div>Error</div>;
-  }
+const Footer = ({ homepage }) => {
   return (
     <footer className="bg-primary-100 py-12 text-white md:px-20 px-5">
       <div className="flex md:flex-row flex-col md:justify-between md:py-16">

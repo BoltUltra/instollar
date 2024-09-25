@@ -1,16 +1,6 @@
 import React from "react";
-import Loading from "./Loading";
-import { useFetchHomePage } from "@/hooks/useFetchPage";
 
-const Stats = () => {
-  const { homepage, loading, error } = useFetchHomePage();
-
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <div>Error</div>;
-  }
+const Stats = ({ homepage }) => {
   return (
     <section className="gradient md:px-20 px-5 py-24">
       <div className="flex md:flex-row flex-col md:space-x-8 md:space-y-0 space-y-8 items-center">

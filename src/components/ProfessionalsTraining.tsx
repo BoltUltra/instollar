@@ -1,19 +1,9 @@
-import { useFetchProfessionalsPage } from "@/hooks/useFetchPage";
 import React from "react";
-import Loading from "./Loading";
 import Image from "next/image";
 import { urlFor } from "@/sanity/utils";
 import { ArrowRight } from "iconsax-react";
 
-const ProfessionalsTraining = () => {
-  const { professionalsPage, loading, error } = useFetchProfessionalsPage();
-
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <div>Error</div>;
-  }
+const ProfessionalsTraining = ({ professionalsPage }) => {
   return (
     <section className="md:px-20 px-5 md:py-24 py-20">
       <div className="md:flex justify-between mb-16">

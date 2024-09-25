@@ -1,20 +1,10 @@
-import { useFetchAboutPage } from "@/hooks/useFetchPage";
 import Image from "next/image";
 import { useState } from "react";
-import Loading from "./Loading";
 import { urlFor } from "@/sanity/utils";
 import { ArrowCircleLeft2, ArrowCircleRight2 } from "iconsax-react";
 
-const AboutTeam = () => {
+const AboutTeam = ({ aboutPage }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const { aboutPage, loading, error } = useFetchAboutPage();
-
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <div>Error</div>;
-  }
 
   const teamMembers = aboutPage?.team || [];
 

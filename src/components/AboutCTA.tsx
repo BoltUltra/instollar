@@ -1,16 +1,6 @@
 import React from "react";
-import Loading from "./Loading";
-import { useFetchAboutPage } from "@/hooks/useFetchPage";
 
-const AboutCTA = () => {
-  const { aboutPage, loading, error } = useFetchAboutPage();
-
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <div>Error</div>;
-  }
+const AboutCTA = ({ aboutPage }) => {
   return (
     <section className="about-cta py-24 md:pb-40 text-white">
       <div className="md:max-w-2xl mx-auto md:px-0 px-5 text-center">

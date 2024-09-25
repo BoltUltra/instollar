@@ -2,21 +2,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { urlFor } from "@/sanity/utils";
 import { ArrowCircleLeft2, ArrowCircleRight2 } from "iconsax-react";
-import Loading from "@/components/Loading";
-import { useFetchHomePage } from "@/hooks/useFetchPage";
 
-const Testimonials = () => {
-  const { homepage, loading, error } = useFetchHomePage();
+const Testimonials = ({ homepage }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(false);
-
-  if (loading) {
-    return <Loading />;
-  }
-
-  if (error) {
-    return <div>Error</div>;
-  }
 
   const testimonials = homepage?.testimonials || [];
 

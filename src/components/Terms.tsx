@@ -1,7 +1,5 @@
 import React from "react";
 import { PortableText } from "@portabletext/react";
-import { useFetchTermsPage } from "@/hooks/useFetchPage";
-import Loading from "./Loading";
 
 const components = {
   types: {},
@@ -37,15 +35,7 @@ const components = {
   },
 };
 
-const Terms = () => {
-  const { termsPage, loading, error } = useFetchTermsPage();
-
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <div>Error</div>;
-  }
+const Terms = ({ termsPage }) => {
   return (
     <section className="md:max-w-3xl mx-auto md:pt-[200px] md:pb-32 pt-44 pb-20 px-5">
       <div className="text-center md:max-w-xl mx-auto mb-20">

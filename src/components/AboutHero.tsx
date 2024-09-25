@@ -1,16 +1,6 @@
 import React from "react";
-import Loading from "./Loading";
-import { useFetchAboutPage } from "@/hooks/useFetchPage";
 
-const AboutHero = () => {
-  const { aboutPage, loading, error } = useFetchAboutPage();
-
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <div>Error</div>;
-  }
+const AboutHero = ({ aboutPage }) => {
   return (
     <div className="mx-auto md:pt-[200px] md:pb-32 pt-44 pb-20 md:px-20 px-5 md:text-left text-center">
       <div className="grid md:grid-cols-2 gap-10">

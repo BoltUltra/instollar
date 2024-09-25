@@ -1,18 +1,8 @@
-import { useFetchProfessionalsPage } from "@/hooks/useFetchPage";
 import React from "react";
-import Loading from "./Loading";
 import Image from "next/image";
 import { urlFor } from "@/sanity/utils";
 
-const ProfessionalsHow = () => {
-  const { professionalsPage, loading, error } = useFetchProfessionalsPage();
-
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <div>Error</div>;
-  }
+const ProfessionalsHow = ({ professionalsPage }) => {
   return (
     <section className="md:px-20 px-5 md:py-24 py-20">
       <div className="grid md:grid-cols-2 gap-8">

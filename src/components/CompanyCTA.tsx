@@ -1,16 +1,6 @@
-import { useFetchCompaniesPage } from "@/hooks/useFetchPage";
 import React from "react";
-import Loading from "./Loading";
 
-const CompanyCTA = () => {
-  const { companiesPage, loading, error } = useFetchCompaniesPage();
-
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <div>Error</div>;
-  }
+const CompanyCTA = ({ companiesPage }) => {
   return (
     <section className="company-cta py-24 md:pb-40 text-white">
       <div className="md:max-w-2xl mx-auto md:px-0 px-5 text-center">

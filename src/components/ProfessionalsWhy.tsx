@@ -1,16 +1,6 @@
 import React from "react";
-import Loading from "./Loading";
-import { useFetchProfessionalsPage } from "@/hooks/useFetchPage";
 
-const ProfessionalsWhy = () => {
-  const { professionalsPage, loading, error } = useFetchProfessionalsPage();
-
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <div>Error</div>;
-  }
+const ProfessionalsWhy = ({ professionalsPage }) => {
   return (
     <section className="md:px-20 px-5 md:py-24 py-20">
       <div className="md:flex justify-between">

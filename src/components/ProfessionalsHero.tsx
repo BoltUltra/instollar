@@ -4,15 +4,7 @@ import Loading from "./Loading";
 import Image from "next/image";
 import { urlFor } from "@/sanity/utils";
 
-const ProfessionalsHero = () => {
-  const { professionalsPage, loading, error } = useFetchProfessionalsPage();
-
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <div>Error</div>;
-  }
+const ProfessionalsHero = ({ professionalsPage }) => {
   return (
     <section className="gradient md:pt-[200px] md:pb-32 pt-44 pb-20 md:px-20 px-5 text-white">
       <div className="grid md:grid-cols-2 items-center">

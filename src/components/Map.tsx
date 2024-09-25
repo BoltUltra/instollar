@@ -1,18 +1,8 @@
-import { useFetchHomePage } from "@/hooks/useFetchPage";
 import Image from "next/image";
 import React from "react";
-import Loading from "./Loading";
 import { urlFor } from "@/sanity/utils";
 
-const Map = () => {
-  const { homepage, loading, error } = useFetchHomePage();
-
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <div>Error</div>;
-  }
+const Map = ({ homepage }) => {
   return (
     <>
       <section className="md:py-24 py-10 bg-[#f1f7f6]">

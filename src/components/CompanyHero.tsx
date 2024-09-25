@@ -1,16 +1,6 @@
 import React from "react";
-import { useFetchCompaniesPage } from "@/hooks/useFetchPage";
-import Loading from "./Loading";
 
-const CompanyHero = () => {
-  const { companiesPage, loading, error } = useFetchCompaniesPage();
-
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <div>Error</div>;
-  }
+const CompanyHero = ({ companiesPage }) => {
   return (
     <section className="company-hero mx-auto md:pt-[200px] md:pb-32 pt-44 pb-20 md:px-20 px-5 text-center text-white">
       <div className="md:max-w-5xl mx-auto">

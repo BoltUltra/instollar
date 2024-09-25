@@ -1,18 +1,8 @@
 import React from "react";
-import { useFetchCompaniesPage } from "@/hooks/useFetchPage";
-import Loading from "./Loading";
 import Image from "next/image";
 import { urlFor } from "@/sanity/utils";
 
-const CompanyWhy = () => {
-  const { companiesPage, loading, error } = useFetchCompaniesPage();
-
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <div>Error</div>;
-  }
+const CompanyWhy = ({ companiesPage }) => {
   return (
     <section className="gradient md:px-20 px-5 md:py-24 py-20 text-white">
       <div className="md:space-y-0 space-y-5 md:flex">

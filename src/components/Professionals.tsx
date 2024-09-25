@@ -1,18 +1,8 @@
 import React from "react";
-import Loading from "./Loading";
-import { useFetchHomePage } from "@/hooks/useFetchPage";
 import Image from "next/image";
 import { urlFor } from "@/sanity/utils";
 
-const Professionals = () => {
-  const { homepage, loading, error } = useFetchHomePage();
-
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <div>Error</div>;
-  }
+const Professionals = ({ homepage }) => {
   return (
     <section className="bg-primary-100 text-white md:px-20 px-5 md:py-24 py-20">
       <div className="grid md:grid-cols-2 gap-8">

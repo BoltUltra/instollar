@@ -1,24 +1,12 @@
 import React from "react";
-import { useFetchHomePage } from "@/hooks/useFetchPage";
 import { v4 as uuidv4 } from "uuid";
-// import Carousel from "./Carousel";
+import dynamic from "next/dynamic";
 import { urlFor } from "@/sanity/utils";
 import Card from "./ImageCard";
-import Loading from "./Loading";
-import dynamic from "next/dynamic";
 
 const Carousel = dynamic(() => import("./Carousel"), { ssr: false });
 
-const LandingHero = () => {
-  const { homepage, loading, error } = useFetchHomePage();
-
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <div>Error</div>;
-  }
-
+const LandingHero = ({ homepage }) => {
   const cards = [
     {
       key: uuidv4(),
