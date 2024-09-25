@@ -23,7 +23,7 @@ const ProfessionalsHero = ({ professionalsPage }) => {
             alt="company image"
             width={447}
             height={520}
-            className="px-10 md:block hidden"
+            className="px-10 md:block hidden w-full"
           />
           <Image
             src={urlFor(professionalsPage?.heroImageMobile).url()}
