@@ -176,8 +176,8 @@ const ContactInfo = ({ contactPage }) => {
                 onChange={handleInputChange}
               />
               <label htmlFor="consent">
-                By checking this box, I agree to allow representatives to
-                contact me.
+                By checking this box, I agree to allow Instollar representatives
+                to contact me.
               </label>
               {errors.consent && (
                 <p className="text-red-600">{errors.consent}</p>
