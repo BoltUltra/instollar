@@ -8,7 +8,7 @@ import CompanyWho from "@/components/CompanyWho";
 import CompanyHow from "@/components/CompanyHow";
 import CompanyCTA from "@/components/CompanyCTA";
 
-export default function AboutUs() {
+export default function Company() {
   return (
     <div className="w-full">
       <Navbar />

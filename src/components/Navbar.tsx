@@ -54,11 +54,18 @@ const Navbar = () => {
                     href={route?.path}
                     className={`${
                       pathname === route.path
-                        ? "text-green-500 mx-3 sm:mx-4 p-3 whitespace-nowrap"
+                        ? "text-green-500 whitespace-nowrap"
                         : "text-white"
-                    } text-base font-normal leading-6`}
+                    } text-base font-normal leading-6 relative`}
                   >
                     {route.title}
+                    <span
+                      className={`${
+                        pathname === route.path
+                          ? "bg-green-500"
+                          : "bg-transparent"
+                      } text-base font-normal leading-6 absolute -bottom-2 left-0 right-0 h-1 w-1 mx-auto rounded-full`}
+                    ></span>
                   </Link>
                 ))}
               </div>

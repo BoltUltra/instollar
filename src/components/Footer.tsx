@@ -67,9 +67,9 @@ const Footer = () => {
       <hr />
       <div className="pt-8 md:flex items-center justify-between md:space-y-0 space-y-4">
         <div className="flex items-center space-x-5 md:order-last order-first">
-          <Link href="/">Privacy</Link>
-          <Link href="/">Terms</Link>
-          <Link href="/">Cookies</Link>
+          <Link href="/privacy">Privacy</Link>
+          <Link href="/terms">Terms</Link>
+          {/* <Link href="/">Cookies</Link> */}
         </div>
         <div>
           <p>Copyright © 2024 Instollar. All rights reserved.</p>

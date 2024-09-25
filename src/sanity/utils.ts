@@ -21,21 +21,21 @@ export async function getCompaniesPage() {
 }
 
 export async function getProfessionalsPage() {
-  return client.fetch(groq`*[_type == "home"][0]`);
+  return client.fetch(groq`*[_type == "professional"][0]`);
 }
 
 export async function getImpactPage() {
-  return client.fetch(groq`*[_type == "home"][0]`);
+  return client.fetch(groq`*[_type == "impact"][0]`);
 }
 
 export async function getContactPage() {
-  return client.fetch(groq`*[_type == "home"][0]`);
+  return client.fetch(groq`*[_type == "contact"][0]`);
 }
 
 export async function getPrivacyPage() {
-  return client.fetch(groq`*[_type == "home"][0]`);
+  return client.fetch(groq`*[_type == "privacy"][0]`);
 }
 
 export async function getTermsPage() {
-  return client.fetch(groq`*[_type == "home"][0]`);
+  return client.fetch(groq`*[_type == "terms"][0]`);
 }

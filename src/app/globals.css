@@ -47,6 +47,11 @@ h6 {
   background-size: cover;
 }
 
+.install-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/installherr.webp') no-repeat center center;
+  background-size: cover;
+}
+
 .cta {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/cta.png') no-repeat center center;
   background-size: cover;
