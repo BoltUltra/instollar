@@ -47,6 +47,11 @@ h6 {
   background-size: cover;
 }
 
+.impact-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('/impacthero.png') no-repeat center center;
+  background-size: cover;
+}
+
 .install-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/installherr.webp') no-repeat center center;
   background-size: cover;
