@@ -39,7 +39,7 @@ const Navbar = () => {
   const router = useRouter();
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  let [isOpen, setIsOpen] = useState(true);
+  let [isOpen, setIsOpen] = useState(false);
 
   function openModal() {
     setIsOpen(true);
@@ -123,12 +123,12 @@ const Navbar = () => {
                     ))}
                   </div>
                   <div className="flex flex-col space-y-5 mt-5">
-                    <Link
-                      href="/"
+                    <button
+                      onClick={openModal}
                       className="text-white bg-primary-100 border-primary-200 hover:bg-primary-300 border-2 rounded-full px-5 md:px-10 py-2 md:py-3 hover:text-white transition-all duration-300 ease-in-out w-full text-center"
                     >
                       Get Started
-                    </Link>
+                    </button>
                     <Link
                       href="/contact"
                       className="text-primary-200 border-primary-200 hover:bg-primary-300 border-2 rounded-full px-5 md:px-10 py-2 md:py-3 hover:text-white transition-all duration-300 ease-in-out w-full text-center"
