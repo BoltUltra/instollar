@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import Button from "./Button";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { HambergerMenu } from "iconsax-react";
 
 const navigationRoutes = [
@@ -35,6 +35,7 @@ const navigationRoutes = [
 ];
 
 const Navbar = () => {
+  const router = useRouter();
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
@@ -74,7 +75,7 @@ const Navbar = () => {
           <div className="md:flex hidden items-center gap-4">
             <Button
               stylet="border border-white text-white rounded-full"
-              onClick={() => alert("Clicked!")}
+              onClick={() => router.push("/contact")}
               title="Contact Us"
             />
             <Button
